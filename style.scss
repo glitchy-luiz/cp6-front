@@ -1,0 +1,123 @@
+// Mixin para estilos de botão
+@mixin button-styles($bg-color, $text-color) {
+    background-color: $bg-color;
+    color: $text-color;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  
+  // Variáveis de cores
+  $primary-color: #3498db;
+  $secondary-color: #2ecc71;
+  $text-color: #333;
+  $header-bg: #ecf0f1;
+  
+  // Estilos Globais
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+  }
+  
+  .books__header {
+    background-color: $header-bg;
+    padding: 20px;
+    text-align: center;
+  
+    h1 {
+      margin: 0;
+      font-size: 2.5em;
+      color: $primary-color;
+    }
+  
+    .menu {
+      margin-top: 15px;
+  
+      a {
+        margin: 0 15px;
+        font-weight: bold;
+        color: $text-color;
+        text-decoration: none;
+  
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+  
+  // Seções
+  section {
+    padding: 40px 20px;
+    text-align: center;
+  
+    h2 {
+      color: $secondary-color;
+    }
+  
+    p {
+      color: $text-color;
+      line-height: 1.5;
+    }
+  }
+  
+  // Estilização da lista de livros
+  .book-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  
+    .book {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      margin: 10px;
+      padding: 20px;
+      width: 200px;
+      transition: transform 0.3s;
+  
+      &:hover {
+        transform: scale(1.05);
+      }
+  
+      h3 {
+        font-size: 1.5em;
+        color: $primary-color;
+      }
+  
+      img {
+        max-width: 100%;
+        border-radius: 4px;
+        margin-bottom: 10px;
+      }
+  
+      p {
+        font-size: 0.9em;
+        color: $text-color;
+      }
+    }
+  }
+  
+  // Estilização de contato
+  .contact {
+    background-color: $header-bg;
+    border-top: 1px solid #ddd;
+  
+    p {
+      a {
+        @include button-styles($primary-color, #fff);
+        margin-top: 10px;
+        display: inline-block;
+      }
+    }
+  }
+  
