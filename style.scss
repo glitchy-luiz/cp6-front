@@ -12,7 +12,6 @@
     }
   }
   $primary-color: #3498db;
-  $secondary-color: #2ecc71;
   $text-color: #333;
   $header-bg: #ecf0f1;
   body {
@@ -53,7 +52,7 @@
     text-align: center;
   
     h2 {
-      color: $secondary-color;
+      color: $primary-color;
     }
   
     p {
